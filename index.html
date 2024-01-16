@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Interactive Resume</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776; Menu</span>
+        <h1>Krithika Ganesh</h1>
+        <p>Cloud Engineer</p>
+    </header>
+
+    <nav>
+        <a href="#objective">Objective</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="objective" class="objective">
+        <h2>Objective</h2>
+        <p>
+            Highly motivated Cloud Engineer with a passion for developing and implementing automated cloud-based solutions. Skilled in troubleshooting and debugging cloud-based applications, and improving customer satisfaction. Proven ability to research and evaluate new cloud-based technologies, recommending and implementing cost-saving solutions that improve system performance.
+        </p>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>SASTRA University, India</strong> - Bachelor's Degree in Computer Science</li>
+            <li><strong>Graduation Year:</strong> 2017</li>
+        </ul>
+        <ul>
+            <li><strong>UT Austin</strong> - Post Graduate Degree in Cloud Computing</li>
+            <li><strong>Graduation Year:</strong> 2023</li>
+        </ul>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>Company ABC</strong> - Web Developer</li>
+            <li><strong>Duration:</strong> 2018 - Present</li>
+            <li><strong>Responsibilities:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <li>Web Development</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project" onclick="openModal('Project 1', 'Description of Project 1.')">
+            <img src="project1.jpg" alt="Project 1">
+        </div>
+        <div class="project" onclick="openModal('Project 2', 'Description of Project 2.')">
+            <img src="project2.jpg" alt="Project 2">
+        </div>
+        <!-- Add more project entries as needed -->
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+
+</body>
+</html>

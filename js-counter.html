@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+</head>
+<body>
+
+    <h1>Welcome to the Site!</h1>
+    
+    <p>This site has been visited <span id="visitorCount">0</span> times.</p>
+
+    <script>
+        // Function to update and display the visitor count
+        function updateVisitorCount() {
+            // Check if localStorage is supported
+            if (typeof(Storage) !== "undefined") {
+                // Retrieve the current count from localStorage
+                var count = localStorage.getItem("visitorCount");
+
+                // If the count is not available, initialize it to 0
+                if (count === null) {
+                    count = 0;
+                }
+
+                // Increment the count
+                count++;
+
+                // Update the count in localStorage
+                localStorage.setItem("visitorCount", count);
+
+                // Display the count on the page
+                document.getElementById("visitorCount").textContent = count;
+            } else {
+                console.log("Sorry, your browser does not support web storage...");
+            }
+        }
+
+        // Call the function to update and display the visitor count
+        updateVisitorCount();
+    </script>
+
+</body>
+</html>
